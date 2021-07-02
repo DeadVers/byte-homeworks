@@ -42,20 +42,21 @@ switch (action) {
 }
 
 
-// // task 3  
+// task 3  
 
 let visitorAge = Number(prompt('Введите свой возраст: '));
-let isAllowed;
+
 
 
 if( visitorAge >= 18 && visitorAge < 60){
     alert('Доступ разрешён');
 }else if((visitorAge >= 60 && visitorAge <= 80) || (visitorAge >= 12 && visitorAge < 18)){
-   if (isAllowed = confirm('Есть разрешение от взрослых?')){
+    let isAllowed = confirm('Есть разрешение от взрослых?');
+    if (isAllowed){
         alert('Доступ разрешён');
-   }else{
+    }else{
         alert('Доступ запрещён.')
-   }
+    }
 }else{
     alert('Доступ запрещен.')
 }
