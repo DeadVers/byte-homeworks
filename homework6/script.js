@@ -54,12 +54,12 @@
 
     // TASK 2
 
-// const a = Number(prompt('Введите начало промежутка:'));
-// const b = Number(prompt('Введите конец промежутка:'));
+const a = Number(prompt('Введите начало промежутка:'));
+const b = Number(prompt('Введите конец промежутка:'));
 
-// const numberGenerator = (num1, num2) =>{
-//     return Math.floor(Math.random() * (num2 - num1 + 1)) + num1;
-// }
+const numberGenerator = (num1, num2) =>{
+    return Math.floor(Math.random() * (num2 - num1 + 1)) + num1;
+}
 
-// result = numberGenerator(a, b);
-// console.log(result);
+result = numberGenerator(a, b);
+console.log(result);
