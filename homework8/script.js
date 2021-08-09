@@ -1,4 +1,4 @@
-//           TASK 1
+        //   TASK 1
 // const trueQuantity = (arr) => {
 //     let numberOfTrue = 0;
 //     for (let value of arr){
@@ -52,38 +52,40 @@ const findExcess = (arr) =>{
         alert('Too short array ;(')
     }
 
-    let evenNumbers = 0;
-    let oddNumbers = 0;
+    let evenNumbers = [];
+    let oddNumbers = [];
 
     for(let number of arr){
         if((number % 2)=== 0){
-            evenNumbers++
+            evenNumbers.push(number);
         }else{
-            oddNumbers++
+            oddNumbers.push(number);
         }
     }
 
-    if(evenNumbers > oddNumbers){
+    if(evenNumbers.length > oddNumbers.length){
         for(let number of arr){ 
             if((number % 2)!== 0){
-            console.log(number)
+                console.log(number);
+                return number;
             }
         }
     }else{
         for(let number of arr){ 
             if((number % 2) === 0){
-              console.log(number)
+              console.log(number);
+              return number;
             }
         }
     }
 }
 
-const res = findExcess([1,2,6,4,8]);
-const res2 = findExcess([1,3,5,6,9]);
-const res3 = findExcess([0, 1, 2]);
-const res4 = findExcess([1, 2, 3]);
-const res5 = findExcess([2, 6, 8, 10, 3]);
-const res6 = findExcess([2, 6, 8, 10, 3]);
-const res7 = findExcess([1, 1, 0, 1, 1]); 
+// const res = findExcess([1,2,6,4,8]);
+// const res2 = findExcess([1,3,5,6,9]);
+// const res3 = findExcess([0, 1, 2]);
+// const res4 = findExcess([1, 2, 3]);
+// const res5 = findExcess([2, 6, 8, 10, 3]);
+// const res6 =findExcess([0, 0, 3, 0, 0]); 
+// const res7 = findExcess([1, 1, 0, 1, 1]); 
 
 
