@@ -1,4 +1,4 @@
-    // TASK 1
+     // TASK 1
 
 // const makeSchedule = () => {
 //     const schedule = {};
@@ -15,7 +15,7 @@
 //        }
 
        
-//        schedule[`${askTime}`] = askTask;
+//        schedule[askTime] = askTask;
        
 //        console.log(schedule);
 //     }while(true)
@@ -36,10 +36,11 @@
         for (let key in object){
             // console.log(Number(object[key]));
             
-            sum += Number(Math.round(object[key]));
+            sum += Number(object[key]);
+            result = sum.toFixed(2);
         }
-        console.log(sum);
-        return sum;
+        console.log(result);
+        return result;
         
     }
 
