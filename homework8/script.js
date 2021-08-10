@@ -64,28 +64,20 @@ const findExcess = (arr) =>{
     }
 
     if(evenNumbers.length > oddNumbers.length){
-        for(let number of arr){ 
-            if((number % 2)!== 0){
-                console.log(number);
-                return number;
-            }
-        }
+                console.log(oddNumbers[0]);
+                return oddNumbers[0];
     }else{
-        for(let number of arr){ 
-            if((number % 2) === 0){
-              console.log(number);
-              return number;
-            }
-        }
+              console.log(evenNumbers[0]);
+              return evenNumbers[0];
     }
 }
 
-// const res = findExcess([1,2,6,4,8]);
-// const res2 = findExcess([1,3,5,6,9]);
-// const res3 = findExcess([0, 1, 2]);
-// const res4 = findExcess([1, 2, 3]);
-// const res5 = findExcess([2, 6, 8, 10, 3]);
-// const res6 =findExcess([0, 0, 3, 0, 0]); 
-// const res7 = findExcess([1, 1, 0, 1, 1]); 
+// const res = findExcess([1,2,6,4,8]);  // 1
+// const res2 = findExcess([1,3,5,6,9]); //6
+// const res3 = findExcess([0, 1, 2]); //1
+// const res4 = findExcess([1, 2, 3]); //2
+// const res5 = findExcess([2, 6, 8, 10, 3]); //3
+// const res6 =findExcess([0, 0, 3, 0, 0]);   // 3
+// const res7 = findExcess([1, 1, 0, 1, 1]);  // 0
 
 
