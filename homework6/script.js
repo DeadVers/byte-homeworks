@@ -1,5 +1,15 @@
    // TASK 1
-
+const isValidPassword = () =>{
+        if( password.length < 6 
+            || password.localeCompare(password.toUpperCase()) === 0 
+            || password.localeCompare(password.toLowerCase()) === 0){
+                return false
+            }
+    }
+    
+const formattedText = (word) => {
+    return word[0].toUpperCase() + word.slice(1,).toLowerCase();
+}
 
 const getFullName = () => {
     let name;
@@ -20,13 +30,7 @@ const getFullName = () => {
         }
     }while(!surname)
 
-    const isValidPassword = () =>{
-        if( password.length < 6 
-            || password.localeCompare(password.toUpperCase()) === 0 
-            || password.localeCompare(password.toLowerCase()) === 0){
-                return false
-            }
-    }
+    
 
     do{
         password = prompt('password?');
@@ -36,9 +40,7 @@ const getFullName = () => {
     }while(!password 
         || isValidPassword() === false)
 
-    const formattedText = (word) => {
-        return word[0].toUpperCase() + word.slice(1,).toLowerCase();
-    }
+   
 
     const editedFullName = formattedText(name)+ ' ' + formattedText(surname);
     alert(editedFullName);
