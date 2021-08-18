@@ -53,32 +53,28 @@ const data = [
 
 const filteredData = (array, desiredObject) => {
         const desiredKeys = Object.keys(desiredObject);     // desiredKeys[0] - age
-        // console.log(`desired keys`, desiredKeys.length)         // desiredKeys[1] - position
+        // console.log(`desired keys`, desiredKeys.length)  // desiredKeys[1] - position
         const res = [];                                     // desiredKeys.length = 2
         
 
         for(let object of array){
-          let numberOfTruth = 0;
+
+          let isCoincide = true;
           for(i = 0; i < desiredKeys.length; i++){
             // console.log(object)
-              let isCoincide = true;
-              
+                
             if(object[desiredKeys[i]] !== desiredObject[desiredKeys[i]]){
               isCoincide = false;
-            }else{
-              numberOfTruth += 1
-            }
-
-            if(numberOfTruth === desiredKeys.length){
+            } 
+          }    
+          if(isCoincide === true){
               res.push(object);
-            }
           }
         }
         console.log(res)
-
 }
 
-filteredData(data, { isActive: true, age: 29 });
+filteredData(data, {  position : 'middle' });
 
 
 // TASK 2
