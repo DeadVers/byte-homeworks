@@ -20,29 +20,45 @@ const products = [
   ];
 
 
-const productCard = (arr) => {
-    cardContainer =  arr.forEach((object) => {
-            container = document.createElement('div');
+// const productCard = (arr) => {
+//     const cardContainer =  arr.forEach((object) => {
+//             const container = document.createElement('div');
             
-            const htmlCode = 
-            `
-            <h1>${object.name}</h1>
-            <h3>${object.brand}</h3>
-            <ul>${object.properties.map((prop) => `<li>${prop}</li>`).join('')}
-            </ul>
-            `
-            document.body.append(container);
-            container.innerHTML = htmlCode;
-    })
-        console.log(cardContainer)
-        return cardContainer;
-}
+//             const htmlCode = 
+//             `
+//             <h1>${object.name}</h1>
+//             <h3>${object.brand}</h3>
+//             <ul>${object.properties.map((prop) => `<li>${prop}</li>`).join('')}
+//             </ul>
+//             `
+//             document.body.append(container);
+//             container.innerHTML = htmlCode;
+//     })
+//         console.log(cardContainer)
+//         return cardContainer;
+// }
     
 
-productCard(products);
+// productCard(products);
 
 
+const productCardOneReturn = (array) =>{
+  return  array.map((object) => {
+    const container = document.createElement('div');
 
+    const htmlCode = 
+    `
+    <h1>${object.name}</h1>
+    <h3>${object.brand}</h3>
+    <ul>${object.properties.map((prop) => `<li>${prop}</li>`).join('')}
+    </ul>
+    `
+    document.body.append(container);
+    container.innerHTML = htmlCode;
+  })
+}
+
+productCardOneReturn(products);
 
 
 
