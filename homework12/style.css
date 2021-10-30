@@ -1,0 +1,19 @@
+.example-button{
+    border: none;
+    background-color: #869be2;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: aliceblue;
+    cursor: pointer;
+} 
+
+
+.tooltip{
+    background-color: rgb(255, 221, 221);
+    max-width: 300px;
+    border-radius: 5px;
+    padding: 7px 20px;
+    text-align: center;
+    display: none;
+}
